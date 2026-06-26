@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:#faf8f5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  ::selection{background:#e7d9cb;color:#26221e}
+  @keyframes softfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes scrollcue{0%{transform:translateY(0);opacity:.7}50%{transform:translateY(7px);opacity:.25}100%{transform:translateY(0);opacity:.7}}
+  .reveal{opacity:1}
+  a{color:inherit;text-decoration:none}
+</style>
+</helmet>
+
+<div style="font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;color:#26221e;width:100%;overflow-x:hidden">
+
+  <!-- ===== GLOBAL NAV ===== -->
+  <div style="position:sticky;top:0;z-index:50;height:44px;background:#1c1916;display:flex;align-items:center;justify-content:center">
+    <div style="width:100%;max-width:1180px;padding:0 28px;display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:30px">
+        <span style="color:#f5f2ee;font-size:13px;font-weight:600;letter-spacing:.04em">Softier</span>
+        <div style="display:flex;gap:26px;font-size:12px;color:#cfc8bf;letter-spacing:-.01em">
+          <a href="#story" style-hover="color:#fff">브랜드</a>
+          <a href="#products" style-hover="color:#fff">제품</a>
+          <a href="#values" style-hover="color:#fff">철학</a>
+          <a href="#contact" style-hover="color:#fff">연락처</a>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <span style="font-size:12px;color:#cfc8bf;letter-spacing:-.01em">Lounge·wear</span>
+        <a href="https://softier.co.kr/" target="_blank" style="background:#8a5e44;color:#fff;font-size:12px;padding:6px 14px;border-radius:9999px;letter-spacing:-.01em" style-hover="background:#79503a">Shop</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SUB NAV (frosted) ===== -->
+  <div style="position:sticky;top:44px;z-index:49;height:54px;background:rgba(245,242,238,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.05);display:flex;align-items:center;justify-content:center">
+    <div style="width:100%;max-width:1180px;padding:0 28px;display:flex;align-items:center;justify-content:space-between">
+      <a href="#top" style="display:flex;align-items:center;gap:11px">
+        <img src="assets/softier-logo.png" alt="Softier" style="height:19px;width:auto;display:block">
+        <span style="font-size:12px;color:#8a8076;letter-spacing:.02em;padding-left:11px;border-left:1px solid #ddd4c8">라운지웨어</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:22px;font-size:13px;color:#46403a">
+        <a href="#story" style="color:#46403a" style-hover="color:#8a5e44">Story</a>
+        <a href="#products" style="color:#46403a" style-hover="color:#8a5e44">Products</a>
+        <a href="#vision" style="color:#46403a" style-hover="color:#8a5e44">Vision</a>
+        <a href="https://www.instagram.com/softier.magazine/" target="_blank" style="background:#8a5e44;color:#fff;padding:7px 17px;border-radius:9999px;font-size:13px" style-hover="background:#79503a">팔로우</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" style="background:#faf8f5;padding:96px 28px 0;text-align:center;position:relative;overflow:hidden">
+    <div style="max-width:940px;margin:0 auto;position:relative;z-index:2">
+      <div class="reveal" style="font-size:13px;letter-spacing:.34em;color:#a99a89;text-transform:uppercase;margin-bottom:26px">Softier · Since 2022</div>
+      <h1 class="reveal" style="font-size:66px;font-weight:600;line-height:1.08;letter-spacing:-.022em;color:#26221e">휴식에 대한<br>진정성을 담아</h1>
+      <p class="reveal" style="font-size:25px;font-weight:400;line-height:1.4;color:#7a6f63;margin-top:28px;letter-spacing:-.01em">Sincerity, woven into every moment of rest.<br><span style="font-size:19px;color:#9a8e80">하루의 끝, 가장 편안한 당신을 위한 라운지웨어</span></p>
+      <div class="reveal" style="display:flex;gap:14px;justify-content:center;margin-top:38px">
+        <a href="#products" style="background:#8a5e44;color:#fff;font-size:17px;padding:13px 28px;border-radius:9999px;letter-spacing:-.01em" style-hover="background:#79503a" style-active="transform:scale(.96)">컬렉션 보기</a>
+        <a href="#story" style="background:transparent;color:#8a5e44;font-size:17px;padding:13px 26px;border-radius:9999px;border:1px solid #d8b99f;letter-spacing:-.01em" style-hover="background:#f3eadf">브랜드 이야기</a>
+      </div>
+    </div>
+    <!-- hero image placeholder -->
+    <div class="reveal" style="max-width:1100px;margin:64px auto 0;position:relative;z-index:2">
+      <div style="position:relative;height:520px;border-radius:18px 18px 0 0;overflow:hidden;background:linear-gradient(135deg,#efe6da,#e4d6c6);box-shadow:rgba(60,42,26,.16) 0 18px 50px -10px">
+        <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.35) 0 2px,transparent 2px 22px);opacity:.5"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+          <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;letter-spacing:.08em;color:#9a7d5e;background:rgba(255,255,255,.6);padding:7px 16px;border-radius:9999px">HERO IMAGE — 1100 × 520</div>
+          <div style="font-family:ui-monospace,monospace;font-size:12px;color:#a8927a">라운지웨어를 입은 모델 / 메인 비주얼</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;padding:30px 0 56px">
+      <div style="width:22px;height:34px;border:1.5px solid #c9bba9;border-radius:9999px;display:flex;justify-content:center;padding-top:7px">
+        <div style="width:3px;height:8px;border-radius:9999px;background:#b6a68f;animation:scrollcue 1.8s ease-in-out infinite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRAND OVERVIEW ===== -->
+  <section id="brand" style="background:#f1ece4;padding:120px 28px">
+    <div style="max-width:980px;margin:0 auto">
+      <div class="reveal" style="font-size:14px;letter-spacing:.2em;color:#a3937f;text-transform:uppercase;margin-bottom:22px">Brand Overview</div>
+      <p class="reveal" style="font-size:34px;font-weight:600;line-height:1.42;letter-spacing:-.02em;color:#352f29">소프티에는 2022년 시작된 라운지웨어 브랜드입니다.<br>바쁜 일상 속 여성들이 집에서 보내는 시간을<br><span style="color:#8a5e44">더 특별하게</span> 만들어주는 옷을 만듭니다.</p>
+      <div class="reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px;border-top:1px solid #ded5c8;padding-top:40px">
+        <div><div style="font-size:13px;color:#a3937f;letter-spacing:-.01em;margin-bottom:8px">설립</div><div style="font-size:30px;font-weight:600;letter-spacing:-.02em">2022</div></div>
+        <div><div style="font-size:13px;color:#a3937f;letter-spacing:-.01em;margin-bottom:8px">카테고리</div><div style="font-size:30px;font-weight:600;letter-spacing:-.02em">홈·라운지</div></div>
+        <div><div style="font-size:13px;color:#a3937f;letter-spacing:-.01em;margin-bottom:8px">타겟 지역</div><div style="font-size:30px;font-weight:600;letter-spacing:-.02em">대한민국</div></div>
+        <div><div style="font-size:13px;color:#a3937f;letter-spacing:-.01em;margin-bottom:8px">고객층</div><div style="font-size:30px;font-weight:600;letter-spacing:-.02em">20–40대</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRAND STORY (dark) ===== -->
+  <section id="story" style="background:#2b2723;padding:128px 28px;color:#f3efe9">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center">
+      <div class="reveal">
+        <div style="font-size:14px;letter-spacing:.2em;color:#bfa88f;text-transform:uppercase;margin-bottom:24px">Brand Story</div>
+        <h2 style="font-size:40px;font-weight:600;line-height:1.18;letter-spacing:-.022em;margin-bottom:28px">일상의 틈에서<br>발견한 휴식</h2>
+        <p style="font-size:18px;line-height:1.65;color:#cfc6ba;letter-spacing:-.01em;margin-bottom:20px">20~40대 여성들은 일, 육아, 자기계발로 늘 바쁜 하루를 보냅니다. 정작 가장 편해야 할 ‘집에서의 시간’에는 옷차림에 대한 고민이 부족했습니다.</p>
+        <p style="font-size:18px;line-height:1.65;color:#cfc6ba;letter-spacing:-.01em">소프티에는 이런 일상의 틈을 발견했습니다. <span style="color:#e6c8ac">“집에서도 예쁘고 편한 옷을 입고 싶다”</span>는 솔직한 욕구에서 출발해, 휴식의 본질에 진정성 있게 접근했습니다.</p>
+      </div>
+      <div class="reveal" style="position:relative;height:480px;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#3a342d,#322c26)">
+        <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 22px)"></div>
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+          <div style="font-family:ui-monospace,monospace;font-size:13px;letter-spacing:.08em;color:#cdb89e;background:rgba(0,0,0,.25);padding:7px 16px;border-radius:9999px">IMAGE — 디테일 컷</div>
+          <div style="font-family:ui-monospace,monospace;font-size:12px;color:#9c8b76">원단 질감 / 집에서의 순간</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="max-width:1100px;margin:96px auto 0;text-align:center">
+      <p style="font-size:34px;font-weight:300;line-height:1.4;letter-spacing:-.01em;color:#efe7da">“ 휴식에 대한 진정성을 담아 ”</p>
+    </div>
+  </section>
+
+  <!-- ===== TARGET CUSTOMER ===== -->
+  <section id="customer" style="background:#faf8f5;padding:120px 28px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div class="reveal" style="text-align:center;margin-bottom:64px">
+        <div style="font-size:14px;letter-spacing:.2em;color:#a3937f;text-transform:uppercase;margin-bottom:18px">Our Customer</div>
+        <h2 style="font-size:42px;font-weight:600;line-height:1.12;letter-spacing:-.022em">우리가 바라보는 사람들</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div class="reveal" style="background:#fff;border:1px solid #ece3d6;border-radius:18px;padding:36px">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:18px">01 — 연령대</div>
+          <div style="font-size:26px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">20–40대 여성</div>
+          <p style="font-size:16px;line-height:1.6;color:#7a6f63">자신을 위한 휴식의 가치를 아는, 일상의 질을 가꾸는 세대</p>
+        </div>
+        <div class="reveal" style="background:#fff;border:1px solid #ece3d6;border-radius:18px;padding:36px">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:18px">02 — 라이프스타일</div>
+          <div style="font-size:26px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">바쁜 일상의 균형</div>
+          <p style="font-size:16px;line-height:1.6;color:#7a6f63">직장인, 워킹맘, 1인 가구 — 자기관리에 관심이 많은 여성</p>
+        </div>
+        <div class="reveal" style="background:#fff;border:1px solid #ece3d6;border-radius:18px;padding:36px">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:18px">03 — 소비 특징</div>
+          <div style="font-size:26px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">핏과 소재 우선</div>
+          <p style="font-size:16px;line-height:1.6;color:#7a6f63">가격보다 나에게 맞는 핏과 소재, 휴식의 질·웰니스 트렌드에 민감</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT LINEUP ===== -->
+  <section id="products" style="background:#f1ece4;padding:120px 28px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div class="reveal" style="text-align:center;margin-bottom:60px">
+        <div style="font-size:14px;letter-spacing:.2em;color:#a3937f;text-transform:uppercase;margin-bottom:18px">Product Lineup</div>
+        <h2 style="font-size:42px;font-weight:600;line-height:1.12;letter-spacing:-.022em">두 개의 라인, 하나의 철학</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+        <div class="reveal" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:rgba(60,42,26,.06) 0 10px 30px -12px">
+          <div style="position:relative;height:380px;background:linear-gradient(135deg,#f0e7db,#e6d8c7)">
+            <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.35) 0 2px,transparent 2px 22px);opacity:.5"></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px">
+              <div style="font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.06em;color:#9a7d5e;background:rgba(255,255,255,.6);padding:6px 14px;border-radius:9999px">PRODUCT — 홈웨어</div>
+            </div>
+          </div>
+          <div style="padding:34px 36px 40px">
+            <div style="font-size:13px;color:#bfa88f;letter-spacing:.06em;margin-bottom:10px">HOMEWEAR</div>
+            <h3 style="font-size:30px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">홈웨어</h3>
+            <p style="font-size:17px;line-height:1.6;color:#7a6f63">집에서의 일상을 위한 데일리 세트. 매일 입어도 질리지 않는 편안함과 정돈된 실루엣.</p>
+          </div>
+        </div>
+        <div class="reveal" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:rgba(60,42,26,.06) 0 10px 30px -12px">
+          <div style="position:relative;height:380px;background:linear-gradient(135deg,#ece4dc,#ddc9b5)">
+            <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.35) 0 2px,transparent 2px 22px);opacity:.5"></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px">
+              <div style="font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.06em;color:#9a7d5e;background:rgba(255,255,255,.6);padding:6px 14px;border-radius:9999px">PRODUCT — 라운지웨어</div>
+            </div>
+          </div>
+          <div style="padding:34px 36px 40px">
+            <div style="font-size:13px;color:#bfa88f;letter-spacing:.06em;margin-bottom:10px">LOUNGEWEAR</div>
+            <h3 style="font-size:30px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">라운지웨어</h3>
+            <p style="font-size:17px;line-height:1.6;color:#7a6f63">휴식과 가벼운 외출까지 아우르는 세미 캐주얼 라인. 집 안과 밖의 경계를 자연스럽게.</p>
+          </div>
+        </div>
+      </div>
+      <p class="reveal" style="text-align:center;font-size:14px;color:#a99a89;margin-top:34px">세부 제품 구성 및 시즌별 라인업은 순차적으로 업데이트됩니다.</p>
+    </div>
+  </section>
+
+  <!-- ===== USP (dark) ===== -->
+  <section id="values" style="background:#2b2723;padding:128px 28px;color:#f3efe9">
+    <div style="max-width:1100px;margin:0 auto">
+      <div class="reveal" style="margin-bottom:64px">
+        <div style="font-size:14px;letter-spacing:.2em;color:#bfa88f;text-transform:uppercase;margin-bottom:18px">Why Softier</div>
+        <h2 style="font-size:42px;font-weight:600;line-height:1.12;letter-spacing:-.022em">타협하지 않는 네 가지</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden">
+        <div class="reveal" style="background:#2b2723;padding:44px 40px">
+          <div style="font-size:15px;color:#bfa88f;margin-bottom:16px">01</div>
+          <h3 style="font-size:25px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">소재</h3>
+          <p style="font-size:16px;line-height:1.6;color:#c4bbae">피부에 닿는 순간부터 다른, 고품질 원단을 선별해 사용합니다.</p>
+        </div>
+        <div class="reveal" style="background:#2b2723;padding:44px 40px">
+          <div style="font-size:15px;color:#bfa88f;margin-bottom:16px">02</div>
+          <h3 style="font-size:25px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">마감</h3>
+          <p style="font-size:16px;line-height:1.6;color:#c4bbae">봉제선, 디테일 하나까지 타협하지 않는 완성도를 추구합니다.</p>
+        </div>
+        <div class="reveal" style="background:#2b2723;padding:44px 40px">
+          <div style="font-size:15px;color:#bfa88f;margin-bottom:16px">03</div>
+          <h3 style="font-size:25px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">진정성 있는 휴식 철학</h3>
+          <p style="font-size:16px;line-height:1.6;color:#c4bbae">트렌드보다 본질에 집중한 브랜드 메시지를 전합니다.</p>
+        </div>
+        <div class="reveal" style="background:#2b2723;padding:44px 40px">
+          <div style="font-size:15px;color:#bfa88f;margin-bottom:16px">04</div>
+          <h3 style="font-size:25px;font-weight:600;letter-spacing:-.02em;margin-bottom:12px">합리적인 프리미엄</h3>
+          <p style="font-size:16px;line-height:1.6;color:#c4bbae">10만원 중후반대 — 품질과 가격의 균형을 지킵니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISION & MISSION ===== -->
+  <section id="vision" style="background:#faf8f5;padding:128px 28px">
+    <div style="max-width:1100px;margin:0 auto">
+      <div class="reveal" style="text-align:center;margin-bottom:72px">
+        <div style="font-size:14px;letter-spacing:.2em;color:#a3937f;text-transform:uppercase;margin-bottom:18px">Vision &amp; Mission</div>
+        <h2 style="font-size:42px;font-weight:600;line-height:1.12;letter-spacing:-.022em">우리가 향하는 곳</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+        <div class="reveal" style="background:#fff;border:1px solid #ece3d6;border-radius:20px;padding:48px 44px">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.1em;margin-bottom:20px">VISION</div>
+          <p style="font-size:27px;font-weight:600;line-height:1.4;letter-spacing:-.02em;color:#352f29">한국 여성들의 일상 속 휴식 문화를 <span style="color:#8a5e44">새롭게 정의하는</span> 라운지웨어 브랜드</p>
+        </div>
+        <div class="reveal" style="background:#fff;border:1px solid #ece3d6;border-radius:20px;padding:48px 44px">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.1em;margin-bottom:20px">MISSION</div>
+          <p style="font-size:27px;font-weight:600;line-height:1.4;letter-spacing:-.02em;color:#352f29">휴식에 대한 진정성을 바탕으로, 소재와 마감에 <span style="color:#8a5e44">타협하지 않는</span> 라운지웨어를 제공한다</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" style="background:#f1ece4;padding:120px 28px">
+    <div style="max-width:980px;margin:0 auto;text-align:center">
+      <div class="reveal">
+        <img src="assets/softier-logo.png" alt="Softier" style="height:34px;width:auto;margin:0 auto 28px;display:block">
+        <p style="font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.3;margin-bottom:14px">가장 편안한 순간을<br>소프티에와 함께</p>
+        <p style="font-size:18px;color:#8a7d6e;margin-bottom:44px">Discover your softest moments.</p>
+      </div>
+      <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <a href="https://softier.co.kr/" target="_blank" style="background:#fff;border:1px solid #e4dccf;border-radius:18px;padding:30px 24px;display:block" style-hover="border-color:#d8b99f">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:10px">Website</div>
+          <div style="font-size:18px;font-weight:600;color:#8a5e44">softier.co.kr</div>
+        </a>
+        <a href="https://www.instagram.com/softier.magazine/" target="_blank" style="background:#fff;border:1px solid #e4dccf;border-radius:18px;padding:30px 24px;display:block" style-hover="border-color:#d8b99f">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:10px">Instagram</div>
+          <div style="font-size:18px;font-weight:600;color:#8a5e44">@softier.magazine</div>
+        </a>
+        <div style="background:#fff;border:1px solid #e4dccf;border-radius:18px;padding:30px 24px">
+          <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:10px">Since</div>
+          <div style="font-size:18px;font-weight:600;color:#46403a">2022</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#1c1916;padding:56px 28px;color:#9c948a">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="assets/softier-logo.png" alt="Softier" style="height:18px;width:auto;filter:brightness(0) invert(1);opacity:.85;display:block">
+        <span style="font-size:12px;color:#807769;padding-left:14px;border-left:1px solid #3a352f">휴식에 대한 진정성을 담아</span>
+      </div>
+      <div style="font-size:12px;color:#6f675b;letter-spacing:-.01em">© 2022 Softier. 홈웨어 · 라운지웨어 · Made in Korea</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  // reveal handled by helmet script (robust against streaming)
+}
+</script>
+</body>
+</html>
