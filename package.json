@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node local-server.js",
-    "dev": "node local-server.js"
+    "dev": "node local-server.js",
+    "ingest": "node scripts/ingest.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "dotenv": "^16.4.5"
   },
   "engines": {

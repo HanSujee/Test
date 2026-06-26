@@ -235,6 +235,55 @@
         <p style="font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.3;margin-bottom:14px">가장 편안한 순간을<br>소프티에와 함께</p>
         <p style="font-size:18px;color:#8a7d6e;margin-bottom:44px">Discover your softest moments.</p>
       </div>
+      <!-- 상담 신청 폼 -->
+      <form id="lead-form" class="reveal" style="background:#fff;border:1px solid #e4dccf;border-radius:20px;padding:40px 36px;margin-bottom:28px;text-align:left">
+        <div style="font-size:14px;letter-spacing:.1em;color:#bfa88f;text-transform:uppercase;margin-bottom:18px">상담 신청</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+          <input name="name" type="text" placeholder="이름 *" required
+            style="border:1px solid #e0d6cc;border-radius:9999px;padding:11px 18px;font-size:14px;font-family:inherit;color:#26221e;background:#faf8f5;outline:none;width:100%;box-sizing:border-box">
+          <input name="email" type="email" placeholder="이메일 *" required
+            style="border:1px solid #e0d6cc;border-radius:9999px;padding:11px 18px;font-size:14px;font-family:inherit;color:#26221e;background:#faf8f5;outline:none;width:100%;box-sizing:border-box">
+        </div>
+        <textarea name="message" placeholder="문의 내용을 입력해주세요" rows="4"
+          style="border:1px solid #e0d6cc;border-radius:14px;padding:12px 18px;font-size:14px;font-family:inherit;color:#26221e;background:#faf8f5;outline:none;width:100%;box-sizing:border-box;resize:vertical;margin-bottom:14px"></textarea>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+          <button type="submit" id="lead-submit"
+            style="background:#8a5e44;color:#fff;font-size:15px;font-family:inherit;padding:12px 28px;border-radius:9999px;border:none;cursor:pointer;letter-spacing:-.01em;transition:background .15s">
+            상담 신청하기
+          </button>
+          <span id="lead-msg" style="font-size:13px"></span>
+        </div>
+      </form>
+      <script>
+      (function(){
+        var form = document.getElementById('lead-form');
+        var btn  = document.getElementById('lead-submit');
+        var msg  = document.getElementById('lead-msg');
+        form.addEventListener('submit', async function(e){
+          e.preventDefault();
+          var data = Object.fromEntries(new FormData(form));
+          btn.disabled = true; btn.textContent = '전송 중…';
+          msg.textContent = '';
+          try {
+            var res = await fetch('/api/lead', {
+              method: 'POST',
+              headers: {'Content-Type':'application/json'},
+              body: JSON.stringify(data)
+            });
+            if (!res.ok) throw new Error();
+            form.reset();
+            msg.style.color = '#4a7c59';
+            msg.textContent = '✓ 상담 신청이 완료됐어요! 곧 연락드릴게요.';
+          } catch {
+            msg.style.color = '#b5301f';
+            msg.textContent = '오류가 발생했어요. 다시 시도해주세요.';
+          } finally {
+            btn.disabled = false; btn.textContent = '상담 신청하기';
+          }
+        });
+      })();
+      </script>
+
       <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
         <a href="https://softier.co.kr/" target="_blank" style="background:#fff;border:1px solid #e4dccf;border-radius:18px;padding:30px 24px;display:block" style-hover="border-color:#d8b99f">
           <div style="font-size:13px;color:#bfa88f;letter-spacing:.04em;margin-bottom:10px">Website</div>
